@@ -5,13 +5,13 @@
 | Column             | Type   | Options     |
 | ------------------ | ------ | ----------- |
 | nickname           | string | null: false |
-| email              | string | null: false |
+| email              | string | null: false unique: true |
 | encrypted_password | string | null: false |
 | last name          | string | null: false |
 | name               | string | null: false |
 | last name Furigana | string | null: false |
 | name Furigana      | string | null: false |
-| date               | string |null: false  |
+| Birthday           | date   | null: false |
 
 
 ### Association
