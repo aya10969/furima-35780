@@ -25,7 +25,7 @@
  
 | Column                  | Type       | Options                        |
 | ------------------------| ---------- | ------------------------------ |
-| Product name            | string     | null: false                    |
+| product name            | string     | null: false                    |
 | explanation             | text       | null: false                    |
 | Product price           | integer    | null: false                    |
 | user                    | references | null: false, foreign_key: true |
@@ -34,7 +34,7 @@
 | product condition_id    | integer    | null: false                    |
 | shipping charges_id     | integer    | null: false                    |
 | shipping area_id        | integer    | null: false                    |
-| Days to ship_id         | integer    | null: false                    |
+| days to ship_id         | integer    | null: false                    |
 
 ### Association
 
@@ -62,11 +62,11 @@
 
 | Column                        | Type    | Options      |
 | ------------------------------| --------| -------------|
-| Postal code                   | string  | null: false  |
+| postal code                   | string  | null: false  |
 | prefectures_id                | integer | null: false  |
 | municipalities                | string  | null: false  |
 | address                       | string  | null: false  |
-| Building name                 | string  |              |
+| building name                 | string  |              |
 | telephone number              | string  | null: false  |
 | item                          | references | null: false, foreign_key: true |
 
