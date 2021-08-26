@@ -66,7 +66,7 @@
 | prefectures                   | string  | null: false  |
 | municipalities                | string  | null: false  |
 | address                       | string  | null: false  |
-| Building name                 | string  | null: false  |
+| Building name                 | string  |              |
 | telephone number              | string  | null: false  |
 | item                          | references | null: false, foreign_key: true |
 
