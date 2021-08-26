@@ -26,10 +26,15 @@
 | Column                  | Type       | Options                        |
 | ------------------------| ---------- | ------------------------------ |
 | Product name            | string     | null: false                    |
+| explanation             | text       | null: false                    |
 | Product price           | integer    | null: false                    |
 | user                    | references | null: false, foreign_key: true |
-| explanation             | test       | null: false                    |
-| active_hash_id          | integer    | null: false                    |
+| explanation             | text       | null: false                    |
+| category_id             | integer    | null: false                    |
+| product condition_id    | integer    | null: false                    |
+| shipping charges_id     | integer    | null: false                    |
+| shipping area_id        | integer    | null: false                    |
+| Days to ship_id         | integer    | null: false                    |
 
 ### Association
 
@@ -63,7 +68,7 @@
 | address                       | string  | null: false  |
 | Building name                 | string  | null: false  |
 | telephone number              | string  | null: false  |
-
+| item                          | references | null: false, foreign_key: true |
 
 
 ### Association
