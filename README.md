@@ -26,14 +26,13 @@
 | Column                  | Type       | Options                        |
 | ------------------------| ---------- | ------------------------------ |
 | product_name            | string     | null: false                    |
-| explanation             | text       | null: false                    |
 | product_price           | integer    | null: false                    |
 | user                    | references | null: false, foreign_key: true |
 | explanation             | text       | null: false                    |
 | category_id             | integer    | null: false                    |
 | product_condition_id    | integer    | null: false                    |
 | shipping_charges_id     | integer    | null: false                    |
-| shipping_area_id        | integer    | null: false                    |
+| prefectures_id          | integer    | null: false                    |
 | days_to_ship_id         | integer    | null: false                    |
 
 ### Association
