@@ -38,14 +38,14 @@
                 <mxCell id="75" value="orders" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
                     <mxGeometry x="270" y="360" width="190" height="120" as="geometry"/>
                 </mxCell>
-                <mxCell id="76" value="・order_text&#10;・user_id&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="75" vertex="1">
+                <mxCell id="76" value="・item&#10;・user&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="75" vertex="1">
                     <mxGeometry y="30" width="190" height="90" as="geometry"/>
                 </mxCell>
                 <mxCell id="77" value="items" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="480" y="130" width="160" height="150" as="geometry"/>
+                    <mxGeometry x="480" y="130" width="160" height="210" as="geometry"/>
                 </mxCell>
-                <mxCell id="78" value="・images&#10;・text&#10;・user_id&#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="77" vertex="1">
-                    <mxGeometry y="30" width="160" height="120" as="geometry"/>
+                <mxCell id="78" value="・images&#10;・product_name&#10;・product_price &#10;・user &#10;・explanation&#10;・category_id&#10;・product_condition_id    &#10;・shipping_charge_id &#10;・prefecture_id  &#10;・days_to_ship_id &#10;&#10;" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="77" vertex="1">
+                    <mxGeometry y="30" width="160" height="180" as="geometry"/>
                 </mxCell>
                 <mxCell id="81" value="has_many : items&amp;nbsp;&lt;br&gt;has_many : orders" style="whiteSpace=wrap;html=1;align=center;labelBorderColor=none;strokeColor=#FF3333;" parent="1" vertex="1">
                     <mxGeometry x="220" y="230" width="140" height="50" as="geometry"/>
@@ -62,10 +62,10 @@
                     <mxGeometry x="480" y="430" width="180" height="50" as="geometry"/>
                 </mxCell>
                 <mxCell id="85" value="shipping_addresses" style="swimlane;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;rounded=1;fontSize=14;fontStyle=0;strokeWidth=2;resizeParent=0;resizeLast=1;shadow=0;dashed=0;align=center;" parent="1" vertex="1">
-                    <mxGeometry x="285" y="540" width="175" height="120" as="geometry"/>
+                    <mxGeometry x="285" y="540" width="175" height="170" as="geometry"/>
                 </mxCell>
-                <mxCell id="86" value="・shipping_addresses　text" style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="85" vertex="1">
-                    <mxGeometry y="30" width="175" height="90" as="geometry"/>
+                <mxCell id="86" value="・postal_code &#10;・prefecture_id&#10;・municipalities &#10;・address・building_name &#10;・telephone_number &#10;・order " style="align=left;strokeColor=none;fillColor=none;spacingLeft=4;fontSize=12;verticalAlign=top;resizable=0;rotatable=0;part=1;" parent="85" vertex="1">
+                    <mxGeometry y="30" width="175" height="140" as="geometry"/>
                 </mxCell>
                 <mxCell id="87" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="76" edge="1">
                     <mxGeometry relative="1" as="geometry">
