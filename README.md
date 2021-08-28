@@ -31,8 +31,8 @@
 | explanation             | text       | null: false                    |
 | category_id             | integer    | null: false                    |
 | product_condition_id    | integer    | null: false                    |
-| shipping_charges_id     | integer    | null: false                    |
-| prefectures_id          | integer    | null: false                    |
+| shipping_charge_id      | integer    | null: false                    |
+| prefecture_id           | integer    | null: false                    |
 | days_to_ship_id         | integer    | null: false                    |
 
 ### Association
@@ -54,15 +54,15 @@
 
 - belongs_to : user
 - belongs_to : item
-- has_one : shipping address 
+- has_one : shipping_address 
 
 
-##  shipping_address テーブル
+##  shipping_addresses テーブル
 
 | Column                        | Type    | Options      |
 | ------------------------------| --------| -------------|
 | postal_code                   | string  | null: false  |
-| prefectures_id                | integer | null: false  |
+| prefecture_id                 | integer | null: false  |
 | municipalities                | string  | null: false  |
 | address                       | string  | null: false  |
 | building_name                 | string  |              |
