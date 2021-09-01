@@ -7,11 +7,18 @@ class User < ApplicationRecord
   has_many :items
   has_many :orders
 
-  validates :nickname, presence: true
-  validates :last_name, presence: true
-  validates :name, presence: true
-  validates :last_name_furigana, presence: true
-  validates :name_furigana, presence: true
-  validates :birthday, presence: true
+
+  with_options presence: true do
+   validates :nickname
+   validates :birthday
+   with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: '全角文字を使用してください' } do
+      validates :name
+      validates :last_name
+    end
+    with_options presence: true, format: { with: /\A[ァ-ヶ]+\z/, message: '全角（カタカナ）を使用してください' } do
+      validates :name_furigana
+      validates :last_name_furigana
+    end
+  end
 
 end
