@@ -4,8 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :items
-  has_many :orders
+  
 
 
   with_options presence: true do
@@ -14,6 +13,9 @@ class User < ApplicationRecord
    with_options presence: true, format: { with: /\A[ぁ-んァ-ヶ一-龥々ー]+\z/, message: '全角文字を使用してください' } do
       validates :name
       validates :last_name
+    end
+    with_options presence: true, format: { with: /[a-z\d]{6,}/i, message: '6文字以上で半角英数字混合での入力' } do
+      validates :password
     end
     with_options presence: true, format: { with: /\A[ァ-ヶ]+\z/, message: '全角（カタカナ）を使用してください' } do
       validates :name_furigana
