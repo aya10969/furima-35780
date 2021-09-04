@@ -14,13 +14,13 @@ class User < ApplicationRecord
       validates :name
       validates :last_name
     end
-    with_options presence: true, format: { with: /[a-z\d]{6,}/i, message: '6文字以上で半角英数字混合での入力' } do
-      validates :password
-    end
     with_options presence: true, format: { with: /\A[ァ-ヶ]+\z/, message: '全角（カタカナ）を使用してください' } do
       validates :name_furigana
       validates :last_name_furigana
     end
   end
+
+  PASSWORD_REGEX = /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]+\z/i.freeze
+  validates_format_of :password, with: PASSWORD_REGEX, message: 'Include both letters and numbers'
 
 end
