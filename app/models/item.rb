@@ -1,5 +1,11 @@
 class Item < ApplicationRecord
-
+  extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :category
+  belongs_to :product_condition
+  belongs_to :shipping_charge
+  belongs_to :prefecture
+  belongs_to :days_to_ship
+ 
  with_options presence: true do
    validates :product_name
    validates :product_price
@@ -11,4 +17,5 @@ class Item < ApplicationRecord
    validates :ays_to_ship_id  
  end
 
+ 
 end
