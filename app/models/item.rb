@@ -1,5 +1,6 @@
 class Item < ApplicationRecord
   extend ActiveHash::Associations::ActiveRecordExtensions
+  belongs_to :user
   belongs_to :category
   belongs_to :product_condition
   belongs_to :shipping_charge
@@ -17,6 +18,7 @@ class Item < ApplicationRecord
    validates :shipping_charge_id  
    validates :prefecture_id 
    validates :days_to_ship_id  
+   validates :image 
  end
 
  
