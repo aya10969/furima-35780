@@ -11,7 +11,6 @@ class Item < ApplicationRecord
  
  with_options presence: true do
    validates :product_name
-   validates :product_price
    validates :explanation  
    validates :category_id 
    validates :product_condition_id 
@@ -19,7 +18,9 @@ class Item < ApplicationRecord
    validates :prefecture_id 
    validates :days_to_ship_id  
    validates :image 
+   with_options presence: true, format: { with: /\A[0-9]+\z/ } do
+     validates :product_price, numericality: {only_integer: true,greater_than_or_equal_to: 300, less_than_or_equal_to: 9999999},
+                presence:{message:"can't be blank" }
+   end
  end
-
- 
 end
