@@ -138,11 +138,10 @@
           <%= image_tag item.image, class: "item-img" %>
 
           <%# 商品が売れていればsold outを表示しましょう %>
-          <% if item.user %>
           <div class='sold-out'>
             <span>Sold Out!!</span>
           </div>
-          <% end %>
+          <%# 商品が売れていればsold outを表示しましょう %>
 
         </div>
         <div class='item-info'>
@@ -150,7 +149,7 @@
             <%= item.product_name %>
           </h3>
           <div class='item-price'>
-            <span><%= item.product_price %>円<br><%= item.shipping_charge_id %></span>
+            <span><%= item.product_price %>円<br><%= item.shipping_charge.name %></span>
             <div class='star-btn'>
               <%= image_tag "star.png", class:"star-icon" %>
               <span class='star-count'>0</span>
