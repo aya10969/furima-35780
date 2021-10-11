@@ -1,6 +1,7 @@
 class OrdersController < ApplicationController
   before_action :authenticate_user!, except: :index
   before_action :set_item, only: [ :index, :create, ]
+  before_action :move_to_index, only: [:index ]
 
 
   def index
@@ -33,6 +34,12 @@ class OrdersController < ApplicationController
     @item = Item.find(params[:item_id])
   end
 
+  def move_to_index
+    if @item.order.present?
+    redirect_to root_path
+    end
+  end
+
   def pay_item
     Payjp.api_key = ENV["PAYJP_SECRET_KEY"]
       Payjp::Charge.create(
@@ -41,7 +48,5 @@ class OrdersController < ApplicationController
         currency: 'jpy'                 # 通貨の種類（日本円）
       )
   end
-  #def shipping_address_params
-  #   params.permit(:postal_code, :prefecture_id, :municipality, :address, :building_name,:telephone_number).merge(order_id: @order.id)
-  #end
+  
 end
