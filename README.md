@@ -37,8 +37,8 @@
 
 ### Association
 
-- belongs_to : user
-- has_one : order
+- belongs_to :user
+- has_one :order
 
 
 
@@ -62,8 +62,8 @@
 | Column                        | Type    | Options      |
 | ------------------------------| --------| -------------|
 | postal_code                   | string  | null: false  |
-| prefecture_id                 | integer | null: false  |
-| municipalities                | string  | null: false  |
+| prefecture_id   県            | integer | null: false  |
+| municipality  市町村           | string  | null: false  |
 | address                       | string  | null: false  |
 | building_name                 | string  |              |
 | telephone_number              | string  | null: false  |
@@ -73,3 +73,4 @@
 ### Association
 
 - belongs_to : order
+- belongs_to : user
