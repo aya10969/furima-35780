@@ -1,5 +1,5 @@
 class OrdersController < ApplicationController
-  before_action :authenticate_user!, except: :index
+  before_action :authenticate_user!, only: :index
   before_action :set_item, only: [ :index, :create]
   before_action :move_to_index, only: [:index ]
 
@@ -25,7 +25,6 @@ class OrdersController < ApplicationController
 
   private
 
-
   def order_params
     params.require(:order_shipping_address).permit(:postal_code, :prefecture_id, :municipality, :address, :building_name, :telephone_number).merge(item_id: params[:item_id], token: params[:token],user_id: current_user.id)
   end
@@ -36,6 +35,8 @@ class OrdersController < ApplicationController
 
   def move_to_index
     if @item.order.present?
+    redirect_to root_path
+    elsif user_signed_in? && current_user.id  == @item.user_id  
     redirect_to root_path
     end
   end
