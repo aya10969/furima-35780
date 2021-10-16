@@ -11,8 +11,8 @@ class OrderShippingAddress
 
   end
     validates :postal_code, presence: true,format: {with: /\A[0-9]{3}-[0-9]{4}\z/, message: "is invalid. Include hyphen(-)"}
-    validates :prefecture_id, presence: true,numericality: {other_than: 0, message: "can't be blank"}
-    validates :telephone_number, presence: true,numericality:{ only_integer: true }
+    validates :prefecture_id, presence: true,numericality: {other_than: 1, message: "can't be blank"}
+    validates :telephone_number, presence: true,format: { with: /\A\d{10,11}\z/ }
    
     def save
       order = Order.create(item_id: item_id, user_id: user_id)

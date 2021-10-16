@@ -31,7 +31,7 @@
 | explanation             | text       | null: false                    |
 | category_id             | integer    | null: false                    |
 | product_condition_id    | integer    | null: false                    |
-| shipping_charge_id      | integer    | null: false                    |
+| shipping_charge_id 配送料  | integer    | null: false                    |
 | prefecture_id           | integer    | null: false                    |
 | days_to_ship_id         | integer    | null: false                    |
 
